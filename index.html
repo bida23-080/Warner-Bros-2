@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warner Bros</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset default browser styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .search-form {
+            display: flex;
+            margin-right: 20px;
+        }
+
+        .search-form input[type="text"] {
+            padding: 8px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 5px; /* Adjust spacing between input and button */
+        }
+
+        .search-form button {
+            padding: 8px 12px;
+            background-color: #f00;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-form button:hover {
+            background-color: #900;
+        }
+
+        /* Hero section styles */
+        .hero {
+            background-image: url('hero-image.jpg');
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f00;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #900;
+        }
+
+        /* Featured section styles */
+        .featured {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .featured h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .movie-posters {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .movie-poster {
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .movie-poster img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .movie-poster img:hover {
+            transform: scale(1.05);
+        }
+
+        /* TV Shows section styles */
+        .tv-shows {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .tv-shows ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .tv-shows ul li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        /* News section styles */
+        .news {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .news-articles {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .news-article {
+            padding: 20px;
+            margin: 0 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        .news-article h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .news-article p {
+            font-size: 1.1em;
+        }
+
+        /* Shop section styles */
+        .shop {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .product {
+            margin: 20px;
+            padding: 20px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .product h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .product .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #f00;
+        }
+
+        /* Sign Up and Contact section styles */
+        .signup,
+        .contact {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .signup form,
+        .contact form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .signup form label,
+        .contact form label {
+            margin-bottom: 10px;
+        }
+
+        .signup form input,
+        .contact form input,
+        .signup form textarea,
+        .contact form textarea,
+        .signup form button,
+        .contact form button {
+            margin-bottom: 15px;
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .signup form button,
+        .contact form button {
+            background-color: #f00;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .signup form button:hover,
+        .contact form button:hover {
+            background-color: #900;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#tvshows">TV Shows</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#signup">Sign Up</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            <form class="search-form" id="searchForm" action="#" method="GET">
+                <input type="text" id="searchInput" placeholder="Search movies...">
+                <button type="submit">Search</button>
+            </form>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Warner Bros</h1>
+        <p>Explore the latest movies and TV shows</p>
+        <a href="#" class="button">Discover Now</a>
+    </section>
+
+    <section class="featured" id="movies">
+        <h2>Featured Movies</h2>
+        <div class="movie-posters">
+            <!-- Movie posters here -->
+        </div>
+    </section>
+
+    <section class="tv-shows" id="tvshows">
+        <h2>TV Shows</h2>
+        <p>Explore our exciting TV series lineup, including dramas, comedies, and more.</p>
+        <ul>
+            <!-- TV show list items here -->
+        </ul>
+    </section>
+
+    <section class="news" id="news">
+        <h2>Latest News</h2>
+        <p>Stay updated with the latest news and articles from Warner Bros.</p>
+        <div class="news-articles">
+            <!-- News articles here -->
+        </div>
+    </section>
+
+    <section class="shop" id="shop">
+        <h2>Shop</h2>
+        <p>Discover merchandise, collectibles, and more from your favorite Warner Bros movies and TV shows.</p>
+        <div class="product-list">
+            <!-- Product items here -->
+        </div>
+    </section>
+
+    <section class="signup" id="signup">
+        <h2>Sign Up</h2>
+        <p>Sign up to receive exclusive offers and updates.</p>
+        <form id="signupForm" action="#" method="POST">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or feedback? Get in touch with us!</p>
+        <form id="contactForm" action="#" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Warner Bros. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
