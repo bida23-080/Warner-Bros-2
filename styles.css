@@ -1,0 +1,378 @@
+/* Reset default browser styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.search-form {
+    display: flex;
+    margin-right: 20px;
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px; /* Adjust spacing between input and button */
+}
+
+.search-form button {
+    padding: 8px 12px;
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #900;
+}
+
+/* Hero section styles */
+.hero {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f00;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #900;
+}
+
+/* Featured section styles */
+.featured {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.featured h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.movie-posters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-poster {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.movie-poster img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.movie-poster img:hover {
+    transform: scale(1.05);
+}
+
+/* TV Shows section styles */
+.tv-shows {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.tv-shows ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tv-shows ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* News section styles */
+.news {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.news-articles {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.news-article {
+    padding: 20px;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.news-article h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.news-article p {
+    font-size: 1.1em;
+}
+
+/* Shop section styles */
+.shop {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    margin: 20px;
+    padding: 20px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.product .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #f00;
+}
+
+/* Sign Up and Contact section styles */
+.signup,
+.contact {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.signup form,
+.contact form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup form label,
+.contact form label {
+    margin-bottom: 10px;
+}
+
+.signup form input,
+.contact form input,
+.signup form textarea,
+.contact form textarea,
+.signup form button,
+.contact form button {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.signup form button,
+.contact form button {
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup form button:hover,
+.contact form button:hover {
+    background-color: #900;
+}
+
+/* Media queries for responsive design */
+
+/* Small devices (phones) */
+@media only screen and (max-width: 600px) {
+    .hero {
+        height: 300px;
+    }
+    
+    .hero h1 {
+        font-size: 2em;
+    }
+    
+    .hero p {
+        font-size: 1em;
+    }
+    
+    .button {
+        padding: 8px 16px;
+        font-size: 1em;
+    }
+    
+    .movie-poster img {
+        width: 150px;
+        height: 225px;
+    }
+    
+    .tv-shows ul li {
+        font-size: 1em;
+    }
+    
+    .news-article {
+        width: 250px;
+    }
+    
+    .product {
+        width: 200px;
+    }
+}
+
+/* Medium devices (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .hero {
+        height: 350px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    
+    .hero p {
+        font-size: 1.2em;
+    }
+    
+    .button {
+        padding: 10px 18px;
+        font-size: 1.1em;
+    }
+    
+    .movie-poster img {
+        width: 180px;
+        height: 270px;
+    }
+    
+    .tv-shows ul li {
+        font-size: 1.1em;
+    }
+    
+    .news-article {
+        width: 280px;
+    }
+    
+    .product {
+        width: 220px;
+    }
+}
+
+/* Large devices (desktops) */
+@media only screen and (min-width: 1025px) {
+    .hero {
+        height: 400px;
+    }
+    
+    .hero h1 {
+        font-size: 3em;
+    }
+    
+    .hero p {
+        font-size: 1.5em;
+    }
+    
+    .button {
+        padding: 12px 22px;
+        font-size: 1.2em;
+    }
+    
+    .movie-poster img {
+        width: 200px;
+        height: 300px;
+    }
+    
+    .tv-shows ul li {
+        font-size: 1.2em;
+    }
+    
+    .news-article {
+        width: 300px;
+    }
+    
+    .product {
+        width: 250px;
+    }
+}
